@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TITULO</title>
+<style>
+        .checkbox {
+ box-sizing: border-box;
+     width: calc(20% - 20px);  
+  height: 45px;
+  border-radus: 1px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  float: left;
+  margin-top: 15px;
+    margin-bottom: 15px;
+ margin-left: 10px;
+    margin-right: 10px;
+}
+
+.checkbox:hover {
+  border: 1px solid black;
+  transform: scale(1.15);
+}
+
+      .checkbox.checked {
+        background-color: lightgreen;
+      }
+
+
+        textarea {
+            width: 100%;
+            height: 80px;
+        }
+
+
+#ALERTA-NTR,
+#ALERTA-SSSCE,
+#ALERTA-URGENCIA,
+#ALERTA-SQAT,
+#ALERTA-GIORDANO-TVP,
+#ALERTA-BEG,
+#ORIENTACOES
+ {
+  color: red;
+background-color: yellow;
+}
+
+#ALERTA-NTR.checked,
+#ALERTA-SSSCE.checked,
+#ALERTA-URGENCIA.checked,
+#ALERTA-SQAT.checked,
+#ALERTA-GIORDANO-TVP.checked,
+#ALERTA-BEG.checked,
+#ORIENTACOES.checked
+ {
+
+	color: black;
+        background-color: lightgreen;
+      }
+ 
+  
+      
+
+
+
+
+
+
+.espacador {
+
+  width: 100%;
+  height: 10px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  float: left;
+  margin: 10px;
+  background-color: gray;
+}
+
+
+
+
+#LONGO-DCAERHSDMAP,
+#LONGO-NDCERV,
+#LONGO-NDLF,
+#LONGO-BEG,
+#LONGO-DLFE
+ {
+height: 135px;
+}
+
+
+
+#INFILTRACAO-PGL,
+#INFILTRACAO-PGL-SEM,
+#IPGT,
+#IPGT-SEM{
+height: 100px;
+}
+
+#GIGA-ORIENTO-PREOP,
+#GIGA-REORIENTO-PREOP
+
+{
+height: 280px;
+}
+
+
+#REVISAOBLOQUEIOLOMBAR,
+#REVISAOBLOQUEIOCERVICAL,
+#REVISAOBLOQUEIOSACROILIACO,
+#REVISAORIZOLOMBAR,
+#REVISAORIZOCERVICAL,
+#REVISAORIZOSACROILIACO
+{
+height: 200px;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="checkbox" id="INICIO1">AMBULATORIO</div>
+
+<div class="checkbox" id="INICIO2">PRIMEIRO ATENDIMENTO</div>
+
+<div class="checkbox" id="SOLICITARM">SOLICITA RELATÓRIO MÉDICO</div>
+<div class="checkbox" id="RETORNA">PACIENTE RETORNA</div>
+<div class="checkbox" id="NAO FEZ EXAMES">NÃO REALIZOU EXAMES SOLICITADOS, APESAR DE TODAS ORIENTAÇÕES</div>
+<div class="checkbox" id="NAO UTILIZOU MEDICACAO">NÃO UTILIZOU MEDICACAO PRESCRITA</div>
+<div class="checkbox" id="MEDICACAO IRREGULAR">UTILIZOU MEDICACAO DE MODO IRREGULAR, APESAR DE TODAS ORIENTAÇÕES</div>
+
+<div class="checkbox" id="additional_item0">
+<textarea id="additional_text0" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+
+<div class="espacador" id="espacador1"> </div>
+
+<div class="checkbox" id="quadro_de_dor">QUADRO DE DOR</div>
+
+
+<div class="checkbox" id="additional_item1">
+<textarea id="additional_text1" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+
+<div class="checkbox" id="dor_lombar_cronica">QUADRO DE DOR LOMBAR CRONICA</div><div class="checkbox" id="dor_cervical_cronica">QUADRO DE DOR CERVICAL CRONICA</div><div class="checkbox" id="dor_dorsal_cronica">QUADRO DE DOR DORSAL CRONICA</div><div class="checkbox" id="dor_há_muitos_anos">HÁ MUITOS ANOS</div><div class="checkbox" id="dor_diária">DOR DIÁRIA</div><div class="checkbox" id="limitacao_funcional">LIMITAÇÃO FUNCIONAL</div><div class="checkbox" id="sem_melhora_com_medidas_conservadoras">SEM MELHORA COM MEDIDAS CONSERVADORAS</div><div class="checkbox" id="sem_melhora_com_fisioterapia">SEM MELHORA COM FISIOTERAPIA</div><div class="checkbox" id="associado_a_irradiacao_para_membros_inferiores">ASSOCIADO A IRRADIACAO PARA MEMBROS INFERIORES</div><div class="checkbox" id="pior mid">PIOR MEMBRO INFERIOR DIREITO</div><div class="checkbox" id="pior mie">PIOR MEMBRO INFERIOR ESQUERDO</div><div class="checkbox" id="associado_a_irradiacao_para_membros_superiores">ASSOCIADO A IRRADIACAO PARA MEMBROS SUPERIORES</div><div class="checkbox" id="pior msd">PIOR MEMBRO SUPERIOR DIREITO</div><div class="checkbox" id="pior mse">PIOR MEMBRO SUPERIOR ESQUERDO</div><div class="checkbox" id="queixa_dormencias_cronicas_em_mmss_e_mmii">QUEIXA DORMENCIAS CRONICAS EM MMSS E MMII</div><div class="checkbox" id="ALERTA-NTR">NEGA TRAUMA RECENTE. NEGA PERDA PONDERAL.NEGA ALTERAÇÕES URINÁRIAS </div><div class="checkbox" id="ALERTA-SSSCE">SEM SINAIS OU SINTOMAS DE SINDROME DA CAUDA EQUINA</div><div class="checkbox" id="sem_outras_queixas_associadas">SEM OUTRAS QUEIXAS ASSOCIADAS</div><div class="checkbox" id="ALERTA-SQAT">SEM QUEIXA ALGICA TORACICA / PRECORDIAL</div>
+
+<div class="checkbox" id="additional_item2">
+<textarea id="additional_text2" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+<div class="espacador" id="espacador1"> </div>
+
+<div class="checkbox" id="nega_patologias_previas">NEGA PATOLOGIAS PREVIAS</div><div class="checkbox" id="hpp">HPP</div><div class="checkbox" id="hipotireoidismos">HIPOTIREOIDISMO</div><div class="checkbox" id="HAS">HAS</div><div class="checkbox" id="DM">DM</div><div class="checkbox" id="CORONARIOPATIA">CORONARIOPATIA</div><div class="checkbox" id="FIBROMIALGIA">FIBROMIALGIA</div><div class="checkbox" id="MARCAPASSO">MARCAPASSO</div><div class="checkbox" id="GASTRITE">GASTRITE</div><div class="checkbox" id="ESCOLIOSE-HIST">RELATA HISTORICO DE ESCOLIOSE</div><div class="checkbox" id="POLIARTRALGIA">POLIARTRALGIA CRONICA</div><div class="checkbox" id="DEPRESSÃO">DEPRESSÃO</div><div class="checkbox" id="ANSIEDADE">ANSIEDADE</div><div class="checkbox" id="DOR DIFUSA CRONICA">DOR DIFUSA PELO CORPO CRONICA, SEM PADRÃO ANATÔMICO, SEM PADRÃO RADICULAR</div><div class="checkbox" id="EAPS">EM ACOMPANHAMENTO COM PSIQUIATRA</div><div class="checkbox" id="EAREUM">EM ACOMPANHAMENTO COM REUMATOLOGISTA</div>
+
+<div class="checkbox" id="additional_item3">
+<textarea id="additional_text3" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+<div class="espacador" id="espacador1"> </div>
+
+<div class="checkbox" id="NEGA ALERGIAS">NEGA ALERGIAS</div><div class="checkbox" id="ALERGIA A DIPIRONA, AAS, AINES">ALERGIA A DIPIRONA, AAS, AINES</div><div class="checkbox" id="ALERGIA A DIPIRONA, NEGA QUALQUER OUTRA ALERGIA
+">ALERGIA A DIPIRONA, NEGA QUALQUER OUTRA ALERGIA
+</div>
+
+<div class="checkbox" id="additional_item4">
+<textarea id="additional_text4" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+
+
+<div class="espacador" id="espacador1"> </div>
+
+<div class="checkbox" id="ALERTA-BEG">BOM ESTADO GERAL, EUPNEICO, LOTE</div><div class="checkbox" id="ALERTA-GIORDANO-TVP">GIORDANO NEGATIVO. PANTURRILHAS LIVRES, SEM SINAIS CLÍNICOS DE TVP</div><div class="checkbox" id="LONGO-DLFE">DOR LOMBAR À FLEXAO-EXTENSAO, PIOR À EXTENSAO. SEM DEFICIT MOTOR AGUDO OU PROGRESSIVO</div><div class="checkbox" id="PATRICK+">PATRICK+</div><div class="checkbox" id="LONGO-DCAERHSDMAP">DOR CERVICAL À EXTENSÃO-ROTAÇÃO. HOFFMAN NÃO PRESENTE. SPURLING NÃO PRESENTE.  SEM DEFICIT MOTOR AGUDO OU PROGRESSIVO</div><div class="checkbox" id="NEGA DOR A MOBILIZACAO DE COXOFEMORAIS">NEGA DOR A MOBILIZACAO DE COXOFEMORAIS</div><div class="checkbox" id="LONGO-NDCERV">NEGA DOR CERVICAL À EXTENSÃO-ROTAÇÃO. HOFFMAN NÃO PRESENTE. SPURLING NÃO PRESENTE.  SEM DEFICIT MOTOR AGUDO OU PROGRESSIVO</div><div class="checkbox" id="LONGO-NDLF">NEGA DOR LOMBAR À FLEXAO-EXTENSAO. SEM DEFICIT MOTOR AGUDO OU PROGRESSIVO</div><div class="checkbox" id="LONGO-BEG">BOM ESTADO GERAL, EUPNEICO, LOTE, GIORDANO NEGATIVO. PANTURRILHAS LIVRES, SEM SINAIS DE TVP</div><div class="checkbox" id="LASEGUE NÃO PRESENTE.">LASEGUE NÃO PRESENTE. </div><div class="checkbox" id="LASEGUE PRESENTE ESQ">LASEGUE PRESENTE À ESQUERDA</div><div class="checkbox" id="LASEGUE PRESENTE DIR">LASEGUE PRESENTE À DIREITA</div><div class="checkbox" id="LASEGUE CONTRA-LATERAL">LASEGUE CONTRA-LATERAL</div>
+
+
+<div class="checkbox" id="additional_item5">
+<textarea id="additional_text5" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+<div class="espacador" id="espacador1"> </div>
+
+<div class="checkbox" id="ORIENTACOES">ORIENTAÇÕES</div><div class="checkbox" id="SOLICITO A PRINCÍPIO FISIOTERAPIA">SOLICITO A PRINCÍPIO FISIOTERAPIA</div><div class="checkbox" id="ALERTA-URGENCIA">ORIENTO CONDIÇOES EM QUE DEVERÁ PROCURAR ATENDIMENTO DE URGENCIA</div><div class="checkbox" id="ORIENTO CONDIÇOES EM QUE DEVERÁ RETORNAR AO ATENDIMENTO DE URGENCIA">ORIENTO CONDIÇOES EM QUE DEVERÁ RETORNAR AO ATENDIMENTO DE URGENCIA</div><div class="checkbox" id="REALIZAR ACOMPANHAMENTO ORTOPEDICO AMBULATORIAL, ENCAMINHO">REALIZAR ACOMPANHAMENTO ORTOPEDICO AMBULATORIAL, ENCAMINHO</div><div class="checkbox" id="FORNEÇO ATESTADO MEDICO">FORNEÇO ATESTADO MEDICO. O CID FOI SOLICITADO E AUTORIZADO PELO PACIENTE</div><div class="checkbox" id="ENCAMINHO PS">ENCAMINHO PARA O ATENDIMENTO DE URGÊNCIA</div><div class="checkbox" id="ORIENTO SOBRE POSSIVEIS DIAGNOSTICOS E NECESSIDADES">ORIENTO SOBRE POSSIVEIS DIAGNOSTICOS E NECESSIDADES</div>
+
+
+<div class="checkbox" id="additional_item6">
+<textarea id="additional_text6" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+<div class="espacador" id="espacador1"> </div>
+
+<div class="checkbox" id="INFILTRACAO-PGL">INFILTRACAO PONTOS GATILHO LOMBAR, CORTICOIDE IM NO GLUTEO. APOS ASSEPSIA/ANTI-SEPSIA. SEM INTERCORRENCIAS</div><div class="checkbox" id="INFILTRACAO-PGL-SEM">INFILTRACAO PONTOS GATILHO LOMBAR  COM ASSEPSIA/ANTI-SEPSIA, SEM INTERCORRENCIAS</div><div class="checkbox" id="IPGT-SEM">INFILTRACAO PONTOS GATILHO EM TRAPEZIO COM ASSEPSIA/ANTI-SEPSIA, SEM INTERCORRENCIAS</div><div class="checkbox" id="IPGT">INFILTRACAO PONTOS GATILHO EM TRAPEZIO COM ASSEPSIA/ANTI-SEPSIA, SEM INTERCORRENCIAS. CORTICOIDE IM NO GLUTEO</div>
+
+<div class="checkbox" id="additional_item7">
+<textarea id="additional_text7" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+
+<div class="espacador" id="espacador1"> </div>
+
+<div class="checkbox" id="SOLICITO RX">SOLICITO RX</div><div class="checkbox" id="SOLICITO EXAMES DE IMAGEM DE COLUNA CERVICAL">SOLICITO RM DE COLUNA CERVICAL</div><div class="checkbox" id="SOLICITO EXAMES DE IMAGEM DE COLUNA DORSAL">SOLICITO RM DE COLUNA DORSAL</div><div class="checkbox" id="SOLICITO EXAMES DE IMAGEM DE COLUNA LOMBAR">SOLICITO RM DE COLUNA LOMBAR</div><div class="checkbox" id="SOLICITO EXAMES DE IMAGEM DE COLUNA LOMBAR E SI">SOLICITO RM DE COLUNA LOMBAR E SI</div><div class="checkbox" id="FAÇO RELATORIO COM JUSTIFICATIVA PARA RM ">FAÇO RELATORIO COM JUSTIFICATIVA PARA RM</div>
+
+<div class="checkbox" id="additional_item8">
+<textarea id="additional_text8" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+<div class="espacador" id="espacador1"> </div>
+
+<div class="checkbox" id="DIPIRONA 1G">DIPIRONA 1G</div><div class="checkbox" id="FLANCOX">FLANCOX</div><div class="checkbox" id="NOVOTRAM PAR">NOVOTRAM PAR</div><div class="checkbox" id="MIOFLEX-A">MIOFLEX-A</div><div class="checkbox" id="TRAMADOL">TRAMADOL</div><div class="checkbox" id="NEGA ALERGIA ÀS MEDICAÇÕES PRESCRITAS">NEGA ALERGIA ÀS MEDICAÇÕES PRESCRITAS</div><div class="checkbox" id="ETOD">ETOD</div><div class="checkbox" id="FLANCOX">FLANCOX</div><div class="checkbox" id="NOVOTRAMPAR">NOVOTRAMPAR</div><div class="checkbox" id="CODEINA">CODEINA</div><div class="checkbox" id="NIMESULIDA">NIMESULIDA</div><div class="checkbox" id="TORAGESIC">TORAGESIC</div><div class="checkbox" id="ECOXE">ECOXE</div><div class="checkbox" id="PREGABALINA">PREGABALINA</div><div class="checkbox" id="DULOXETINA">DULOXETINA</div><div class="checkbox" id="ADORLAN25">ADORLAN 25</div><div class="checkbox" id="ADORLAN50">ADORLAN 50</div><div class="checkbox" id="CURC">CURC</div><div class="checkbox" id="RESTIVA">RESTIVA</div><div class="checkbox" id="PALEXIS">PALEXIS</div><div class="checkbox" id="PILATES">PILATES</div><div class="checkbox" id="RPG">RPG</div><div class="checkbox" id="NATAÇÃO">NATAÇÃO</div><div class="checkbox" id="ACUPUNTURA">ACUPUNTURA</div><div class="checkbox" id="ENCAMINHO PARA REUMATOLOGIA">ENCAMINHO PARA REUMATOLOGIA</div><div class="checkbox" id="ENCAMINHO PARA PSIQUIATRIA">ENCAMINHO PARA PSIQUIATRIA</div><div class="checkbox" id="ENCAMINHO PARA NEUROLOGIA">ENCAMINHO PARA NEUROLOGIA</div>
+
+<div class="checkbox" id="additional_item9">
+<textarea id="additional_text9" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+
+<div class="espacador" id="espacador1"> </div>
+
+<div class="checkbox" id="REVISAOBLOQUEIOLOMBAR">RETORNO (REVISAO)BLOQUEIO FACETARIO LOMBAR. MELHORA DO QUADRO ALGICO SUPERIOR A 50%, MELHORA TRANSITORIA. EXAME FISICO SEM SINIAS CLINICOS DE INFECCAO. FUNCAO  MOTORA EM MEMBROS INFERIORES PRESERVADA EM RELACAO EXAME PREVIO. ORIENTACOES. REABILITACAO. 
+</div><div class="checkbox" id="REVISAOBLOQUEIOSACROILIACO">RETORNO (REVISAO)BLOQUEIO FACETARIO LOMBAR BAIXA / BLOQUEIO SACRO-ILÍACO. MELHORA DO QUADRO ALGICO SUPERIOR A 50%, MELHORA TRANSITORIA. EXAME FISICO SEM SINIAS CLINICOS DE INFECCAO. FUNCAO  MOTORA EM MEMBROS INFERIORES PRESERVADA EM RELACAO EXAME PREVIO. ORIENTACOES. REABILITACAO. 
+</div><div class="checkbox" id="REVISAOBLOQUEIOCERVICAL">RETORNO (REVISAO)BLOQUEIO FACETARIO CERVICAL. MELHORA DO QUADRO ALGICO SUPERIOR A 50%, MELHORA TRANSITORIA. EXAME FISICO SEM SINIAS CLINICOS DE INFECCAO. FUNCAO  MOTORA EM MEMBROS SUPERIORES E INFERIORES PRESERVADA EM RELACAO EXAME PREVIO. ORIENTACOES. 
+</div><div class="checkbox" id="REVISAORIZOLOMBAR">RETORNO (REVISAO) RIZOTOMIA LOMBAR. MELHORA DO QUADRO ALGICO. ATUALMENTE SEM USO DE MEDICACAO. SATISFEITO. EXAME FISICO SEM SINIAS CLINICOS DE INFECCAO. FUNCAO  MOTORA EM MEMBROS INFERIORES PRESERVADA EM RELACAO EXAME PREVIO. ORIENTACOES
+</div><div class="checkbox" id="REVISAORIZOSACROILIACO">RETORNO (REVISAO) RIZOTOMIA LOMBAR BAIXA-SACROILIACA. MELHORA DO QUADRO ALGICO. ATUALMENTE SEM USO DE MEDICACAO. SATISFEITO. EXAME FISICO SEM SINIAS CLINICOS DE INFECCAO. FUNCAO  MOTORA EM MEMBROS INFERIORES PRESERVADA EM RELACAO EXAME PREVIO. ORIENTACOES
+</div><div class="checkbox" id="REVISAORIZOCERVICAL">RETORNO (REVISAO) RIZOTOMIA CERVICAL. MELHORA DO QUADRO ALGICO. ATUALMENTE SEM USO DE MEDICACAO. SATISFEITO. EXAME FISICO SEM SINIAS CLINICOS DE INFECCAO. FUNCAO  MOTORA EM MEMBROS SUPERIORES E INFERIORES PRESERVADA EM RELACAO EXAME PREVIO
+</div>
+
+<div class="checkbox" id="additional_item10">
+<textarea id="additional_text10" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+<div class="espacador" id="espacador1"> </div>
+
+<div class="checkbox" id="INDICO-BL">INDICO BLOQUEIO LOMBAR. ORIENTO SOBRE ETAPAS DO TRATAMENTO</div><div class="checkbox" id="INDICO-DLQ">INDICO DENERVAÇÃO LOMBAR. ORIENTO SOBRE ETAPAS DO TRATAMENTO</div><div class="checkbox" id="INDICO-RL">INDICO RIZOTOMIA LOMBAR</div><div class="checkbox" id="INDICO-BC">INDICO BLOQUEIO CERVICAL. ORIENTO SOBRE ETAPAS DO TRATAMENTO</div><div class="checkbox" id="INDICO-DC">INDICO DENERVAÇÃO CERVICAL. ORIENTO SOBRE ETAPAS DO TRATAMENTO</div><div class="checkbox" id="INDICO-RC">INDICO RIZOTOMIA CERVICAL</div><div class="checkbox" id="INDICO-BSI">INDICO BLOQUEIO LOMBAR BAIXA-SACROILIACA. ORIENTO SOBRE ETAPAS DO TRATAMENTO</div><div class="checkbox" id="INDICO-DSI">INDICO DENERVAÇÃO LOMBAR BAIXA-SACROILIACA. ORIENTO SOBRE ETAPAS DO TRATAMENTO</div>
+
+
+
+<div class="checkbox" id="INDICO-RSI">INDICO RIZOTOMIA LOMBAR BAIXA-SACROILIACA</div>
+
+<div class="checkbox" id="additional_item11">
+<textarea id="additional_text11" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+
+
+<div class="espacador" id="espacador1"> </div>
+
+<div class="checkbox" id="GIGA-ORIENTO-PREOP">ORIENTO DETALHADAMENTE SOBRE O PROCEDIMENTO, RISCOS, BENEFÍCIOS E LIMITAÇÕES DO TRATAMENTO PROPOSTO. PACIENTE COMPREENDE.  PACIENTE COMPREENDE. ORIENTO DETALHADAMENTE TAMBÉM  SOBRE O PRÉ-OPERATÓRIO E O PÓS-OPERATÓRIO. PACIENTE COMPREENDE. ENTREGO E EXPLICO "TERMO DE CONSENTIMENTO INFORMADO LIVRE E ESCLARECIDO". PACIENTE COMPREENDE.</div>
+
+
+<div class="checkbox" id="GIGA-REORIENTO-PREOP">REORIENTO DETALHADAMENTE SOBRE O PROCEDIMENTO, RISCOS, BENEFÍCIOS E LIMITAÇÕES DO TRATAMENTO PROPOSTO. PACIENTE COMPREENDE.  
+PACIENTE COMPREENDE. ORIENTO DETALHADAMENTE TAMBÉM  SOBRE O PRÉ-OPERATÓRIO E O PÓS-OPERATÓRIO. PACIENTE COMPREENDE. REORIENTO "TERMO DE CONSENTIMENTO INFORMADO LIVRE E ESCLARECIDO". PACIENTE COMPREENDE.</div>
+
+<div class="checkbox" id="additional_item12">
+<textarea id="additional_text12" maxlength="1000" oninput="copyToClipboard()"></textarea>
+</div>
+
+
+
+<script>
+        const checkboxes = document.querySelectorAll(".checkbox");
+        const additionalTextFields = [
+		 { id: "additional_item0", element: document.getElementById("additional_text0") },
+           { id: "additional_item1", element: document.getElementById("additional_text1") },
+            { id: "additional_item2", element: document.getElementById("additional_text2") },
+            { id: "additional_item3", element: document.getElementById("additional_text3") },
+            { id: "additional_item4", element: document.getElementById("additional_text4") },
+
+    { id: "additional_item5", element: document.getElementById("additional_text5") },
+    { id: "additional_item6", element: document.getElementById("additional_text6") },
+    { id: "additional_item7", element: document.getElementById("additional_text7") },
+    { id: "additional_item8", element: document.getElementById("additional_text8") },
+    { id: "additional_item9", element: document.getElementById("additional_text9") },
+    { id: "additional_item10", element: document.getElementById("additional_text10") },
+    { id: "additional_item11", element: document.getElementById("additional_text11") },
+     { id: "additional_item12", element: document.getElementById("additional_text12") },
+
+
+        ];
+        
+        for (let checkbox of checkboxes) {
+            checkbox.addEventListener("click", function() {
+                checkbox.classList.toggle("checked");
+                copyToClipboard();
+            });
+        }
+
+        for (let textField of additionalTextFields) {
+            textField.element.addEventListener('input', function() {
+                textField.element.parentElement.classList.add('checked');
+                copyToClipboard();
+            });
+        }
+
+        function copyToClipboard() {
+            let selected = [];
+            for (let checkbox of checkboxes) {
+                if (checkbox.classList.contains("checked")) {
+                    let matchingField = additionalTextFields.find(field => field.id === checkbox.id);
+                    if (matchingField && matchingField.element.value.trim() !== "") {
+                        selected.push(matchingField.element.value.trim());
+                    } else if (!matchingField) {
+                        selected.push(checkbox.textContent.trim());
+                    }
+                }
+            }
+            selected = selected.filter(text => text !== "").join(" ");
+            navigator.clipboard.writeText(selected);
+        }
+
+    </script>
+</body>
+</html>
