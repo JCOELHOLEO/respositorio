@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de Dor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+        }
+        .question {
+            margin: 15px 0;
+        }
+        .scale {
+            display: flex;
+            justify-content: space-between;
+        }
+        .scale button {
+            flex: 1;
+            margin: 3px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #ddd;
+            font-size: 16px;
+        }
+        .scale button.selected {
+            background: #007bff;
+            color: white;
+        }
+        .image-options img {
+            width: 70px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 2px solid transparent;
+        }
+        .image-options img.selected {
+            border: 2px solid #007bff;
+        }
+        .input-text, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background: #28a745;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Questionário de Dor</h1>
+        
+        <div class="question">
+            <label>Como avalia a sua dor agora, neste momento? (0 a 10)</label>
+            <div class="scale">
+                <button onclick="selectScale(this, 'pain-now')">0</button>
+                <button onclick="selectScale(this, 'pain-now')">1</button>
+                <button onclick="selectScale(this, 'pain-now')">2</button>
+                <button onclick="selectScale(this, 'pain-now')">3</button>
+                <button onclick="selectScale(this, 'pain-now')">4</button>
+                <button onclick="selectScale(this, 'pain-now')">5</button>
+                <button onclick="selectScale(this, 'pain-now')">6</button>
+                <button onclick="selectScale(this, 'pain-now')">7</button>
+                <button onclick="selectScale(this, 'pain-now')">8</button>
+                <button onclick="selectScale(this, 'pain-now')">9</button>
+                <button onclick="selectScale(this, 'pain-now')">10</button>
+            </div>
+        </div>
+
+        <div class="question">
+            <label>Por favor indique a principal zona de dor:</label>
+            <input type="text" class="input-text" placeholder="Ex: Lombar">
+        </div>
+
+        <div class="question">
+            <label>A sua dor espalha-se a outras regiões do corpo?</label>
+            <select id="spread">
+                <option>Não</option>
+                <option>Sim</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>Se sim, indique a direção para onde a dor se espalha:</label>
+            <select>
+                <option>Para baixo (pernas)</option>
+                <option>Para cima (pescoço, cabeça)</option>
+                <option>Para os lados (costas, ombros)</option>
+            </select>
+        </div>
+
+        <button class="submit-btn">Enviar Respostas</button>
+    </div>
+
+    <script>
+        function selectScale(element, group) {
+            document.querySelectorAll(`.${group} button`).forEach(btn => btn.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+    </script>
+</body>
+</html>
